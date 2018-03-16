@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :cocktails do
-    resources :doses, only: [:new, :create]
-  end
-  resources :doses, only: [:show, :edit, :update, :destroy]
+   resources :cocktails, except: :index
+   root to: 'cocktails#index'
+
+  # resources :cocktails do
+  #   resources :doses, only: [:new, :create]
+  # end
+  # resources :doses, only: [:show, :edit, :update, :destroy]
 end
 
   # resources :restaurants do
@@ -16,3 +19,9 @@ end
   #   resources :reviews, only: [:new, :create]
   # end
   # resources :reviews, only: [:show, :edit, :update, :destroy]
+
+#   Rails.application.routes.draw do
+#   resources :articles, except: :index
+#   root to: 'articles#index'
+# end
+
