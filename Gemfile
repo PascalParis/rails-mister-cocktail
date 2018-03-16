@@ -39,7 +39,6 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'simple_form'
 
-gem 'pg'
 
 
 group :development, :test do
